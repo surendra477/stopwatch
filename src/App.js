@@ -8,7 +8,7 @@ function App() {
   const increment = useRef(null);
 
   const handlerstart = (e) => {
-  
+   clearInterval(increment.current);
   increment.current = setInterval(() => {
     setTimer((timer) => timer + 1);
   }, 10);
